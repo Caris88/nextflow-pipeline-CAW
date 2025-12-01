@@ -1,0 +1,35 @@
+profiles {
+
+  singularity {
+    process.executor = 'slurm'
+    singularity.enabled = true
+    singularity.autoMounts = true
+
+    process {
+      containerEngine = 'singularity'
+
+      withLabel: 'nanoplot' {
+        container = 'quay.io/biocontainers/nanoplot:1.40.0--py_0'
+      }
+
+      withLabel: 'nanofilt' {
+        container = 'quay.io/biocontainers/nanofilt:2.8.0--py_0'
+      }
+
+      withLabel: 'filtlong' {
+        container = 'quay.io/biocontainers/filtlong:0.2.1--h5bf99c6_0'
+      }
+    }
+  }
+
+  docker {
+    process.executor = 'local'
+    docker.enabled = true
+  }
+
+  local {
+    process.executor = 'local'
+  }
+}
+
+params.outdir = "results"

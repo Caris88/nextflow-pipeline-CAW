@@ -1,0 +1,171 @@
+Nov-28 15:01:18.240 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity -resume
+Nov-28 15:01:18.820 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.0
+Nov-28 15:01:18.956 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /users/user03/data/scripts/modules/nextflow.config
+Nov-28 15:01:18.970 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /users/user03/data/scripts/modules/nextflow.config
+Nov-28 15:01:19.077 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Nov-28 15:01:20.711 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [singularity]
+Nov-28 15:01:21.029 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/user03/.nextflow/plugins; core-plugins: nf-amazon@3.4.1,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.1,nf-wave@1.16.1
+Nov-28 15:01:21.055 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-28 15:01:21.056 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-28 15:01:21.062 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-28 15:01:21.105 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-28 15:01:21.532 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-28 15:01:21.539 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-28 15:01:21.539 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-28 15:01:21.586 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/user03/.nextflow/secrets/store.json
+Nov-28 15:01:21.593 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1e1b061] - activable => nextflow.secret.LocalSecretsProvider@1e1b061
+Nov-28 15:01:21.657 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Nov-28 15:01:21.701 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [small_pare] DSL2 - revision: 7a91be213e
+Nov-28 15:01:21.847 [main] DEBUG nextflow.Session - Session UUID: 4288f412-7a20-4383-8d1d-e5380253acfc
+Nov-28 15:01:21.848 [main] DEBUG nextflow.Session - Run name: small_pare
+Nov-28 15:01:21.853 [main] DEBUG nextflow.Session - Executor pool size: 2
+Nov-28 15:01:21.877 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-28 15:01:21.893 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-28 15:01:21.953 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.0 build 10289
+  Created: 22-10-2025 16:26 UTC (18:26 SAST)
+  System: Linux 6.8.0-88-generic
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 22.0.1+8-16
+  Encoding: UTF-8 (UTF-8)
+  Process: 125392@compute-4-caw [192.168.20.153]
+  CPUs: 1 - Mem: 236.1 GB (222.6 GB) - Swap: 0 (0)
+Nov-28 15:01:22.086 [main] DEBUG nextflow.Session - Work-dir: /users/user03/data/scripts/modules/work [ceph]
+Nov-28 15:01:22.090 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /users/user03/data/scripts/modules/bin
+Nov-28 15:01:22.113 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-28 15:01:22.141 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-28 15:01:22.151 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-28 15:01:22.292 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-28 15:01:22.320 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Nov-28 15:01:22.586 [main] DEBUG nextflow.Session - Session start
+Nov-28 15:01:23.333 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-28 15:01:24.568 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:nanoplot` matches labels `nanoplot` for process with name NANOPLOT_RAW
+Nov-28 15:01:24.604 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-28 15:01:24.604 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-28 15:01:24.651 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Nov-28 15:01:24.680 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Nov-28 15:01:24.684 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Nov-28 15:01:24.696 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-28 15:01:24.773 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NANOPLOT_RAW': maxForks=0; fair=false; array=0
+Nov-28 15:01:24.933 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:nanofilt` matches labels `nanofilt` for process with name NANOFILT
+Nov-28 15:01:24.942 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-28 15:01:24.943 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-28 15:01:24.944 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NANOFILT': maxForks=0; fair=false; array=0
+Nov-28 15:01:24.960 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:nanoplot` matches labels `nanoplot` for process with name NANOPLOT_FILTERED
+Nov-28 15:01:24.966 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-28 15:01:24.967 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-28 15:01:24.968 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NANOPLOT_FILTERED': maxForks=0; fair=false; array=0
+Nov-28 15:01:24.976 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:filtlong` matches labels `filtlong` for process with name FILTLONG
+Nov-28 15:01:24.983 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-28 15:01:24.983 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-28 15:01:24.985 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FILTLONG': maxForks=0; fair=false; array=0
+Nov-28 15:01:24.998 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NANOPLOT_FILTERED, NANOPLOT_HIGH, MULTIQC, NANOFILT, FILTLONG, NANOPLOT, NANOPLOT_RAW
+Nov-28 15:01:25.002 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Nov-28 15:01:25.025 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NANOPLOT_RAW
+Nov-28 15:01:25.036 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NANOFILT
+Nov-28 15:01:25.043 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NANOPLOT_FILTERED
+Nov-28 15:01:25.044 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FILTLONG
+Nov-28 15:01:25.044 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: *_251.fastq.gz; options: [:]
+Nov-28 15:01:25.047 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_be6c258788718e97: /users/user03/data/scripts/modules/nanofilt.nf
+  Script_042100217f83ec10: /users/user03/data/scripts/modules/nanoplot.nf
+  Script_a14f2404b9bda158: /users/user03/data/scripts/modules/main.nf
+  Script_b8547b5c3d30a44f: /users/user03/data/scripts/modules/multiqc.nf
+  Script_7928639a60cfd0c8: /users/user03/data/scripts/modules/filtlong.nf
+Nov-28 15:01:25.047 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-28 15:01:25.047 [main] DEBUG nextflow.Session - Session await
+Nov-28 15:01:25.581 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://docker.io/prccar005/nanofilt:v1; path=/users/user03/data/scripts/modules/work/singularity/docker.io-prccar005-nanofilt-v1.img
+Nov-28 15:01:25.582 [Actor Thread 4] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/nanoplot:1.41.3--pyhdfd78af_0; path=/users/user03/data/scripts/modules/work/singularity/quay.io-biocontainers-nanoplot-1.41.3--pyhdfd78af_0.img
+Nov-28 15:01:25.885 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [40/868938] Cached process > NANOFILT (FAZ22052_pass_a4c5235d_9302830b_251.fastq)
+Nov-28 15:01:25.892 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [69/48754d] Cached process > NANOPLOT_RAW (1)
+Nov-28 15:01:26.001 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [da/e5ec6d] Cached process > NANOPLOT_FILTERED (1)
+Nov-28 15:01:26.020 [Actor Thread 3] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-28 15:01:26.384 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process FILTLONG (1) > jobId: 785; workDir: /users/user03/data/scripts/modules/work/b3/000647bb3004b44dfaafb14b4cbd26
+Nov-28 15:01:26.389 [Task submitter] INFO  nextflow.Session - [b3/000647] Submitted process > FILTLONG (1)
+Nov-28 15:01:35.008 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 785; id: 4; name: FILTLONG (1); status: COMPLETED; exit: 0; error: -; workDir: /users/user03/data/scripts/modules/work/b3/000647bb3004b44dfaafb14b4cbd26 started: 1764334889713; exited: 2025-11-28T13:01:34.288350915Z; ]
+Nov-28 15:01:35.015 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-28 15:01:35.030 [TaskFinalizer-1] DEBUG n.processor.TaskFileCollector - Process `FILTLONG (1)` is unable to find [UnixPath]: `/users/user03/data/scripts/modules/work/b3/000647bb3004b44dfaafb14b4cbd26/FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz.filtlong.fastq.gz` (pattern: `FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz.filtlong.fastq.gz`)
+Nov-28 15:01:35.053 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FILTLONG (1); work-dir=/users/user03/data/scripts/modules/work/b3/000647bb3004b44dfaafb14b4cbd26
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz.filtlong.fastq.gz` expected by process `FILTLONG (1)`
+Nov-28 15:01:35.236 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'FILTLONG (1)'
+
+Caused by:
+  Missing output file(s) `FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz.filtlong.fastq.gz` expected by process `FILTLONG (1)`
+
+
+Command executed:
+
+  filtlong       --min_length 500       --min_mean_q 7       --target_bases 1000000000       FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz     | gzip -c > FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.filtlong.fastq.gz
+
+Command exit status:
+  0
+
+Command output:
+  (empty)
+
+Command error:
+    11298 reads (6775077 bp)
+    11996 reads (7258882 bp)
+    12646 reads (7742564 bp)
+    13845 reads (8226425 bp)
+    14791 reads (8710224 bp)
+    15514 reads (9194247 bp)
+    16481 reads (9678062 bp)
+    17591 reads (10162310 bp)
+    18321 reads (10646882 bp)
+    19056 reads (11131875 bp)
+    19701 reads (11615934 bp)
+    20389 reads (12099966 bp)
+    21123 reads (12583942 bp)
+    21776 reads (13068024 bp)
+    22458 reads (13551906 bp)
+    23193 reads (14035716 bp)
+    23851 reads (14519517 bp)
+    24508 reads (15003364 bp)
+    25203 reads (15488061 bp)
+    26268 reads (15971826 bp)
+    27755 reads (16455597 bp)
+    28553 reads (16939638 bp)
+    29287 reads (17423412 bp)
+    29988 reads (17907936 bp)
+    30730 reads (18391746 bp)
+    31471 reads (18875968 bp)
+    32152 reads (19360080 bp)
+    32841 reads (19843700 bp)
+    33513 reads (20327760 bp)
+    34988 reads (20811396 bp)
+    35677 reads (21295752 bp)
+    36847 reads (21779579 bp)
+    37852 reads (22264794 bp)
+    38516 reads (22748544 bp)
+    39216 reads (23232582 bp)
+    39917 reads (23716798 bp)
+    40658 reads (24202026 bp)
+    41353 reads (24686573 bp)
+    41999 reads (25170569 bp)
+    42679 reads (25654456 bp)
+    43380 reads (26138482 bp)
+    44048 reads (26622540 bp)
+    44215 reads (26752574 bp)
+  
+  Filtering long reads
+    target: 1000000000 bp
+    not enough reads to reach target
+  
+  Outputting passed long reads
+
+Work dir:
+  /users/user03/data/scripts/modules/work/b3/000647bb3004b44dfaafb14b4cbd26
+
+Container:
+  /users/user03/data/containers/filtlongv0.3.1.sif
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Nov-28 15:01:35.243 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-28 15:01:35.277 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `FAZ22052_pass_a4c5235d_9302830b_251.fastq.nanofilt.fastq.gz.filtlong.fastq.gz` expected by process `FILTLONG (1)`
+Nov-28 15:01:35.363 [TaskFinalizer-1] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=3; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=5.3s; cachedDuration=1m 15s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Nov-28 15:01:35.528 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-28 15:01:35.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Nov-28 15:01:35.537 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=3; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=5.3s; cachedDuration=1m 15s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Nov-28 15:01:35.567 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-28 15:01:35.661 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
